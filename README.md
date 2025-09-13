@@ -1,21 +1,99 @@
-# DIO - Trilha .NET - Explorando a linguagem C#
-www.dio.me
+# 🏨 Hospedafy
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de explorando a linguagem C#, da trilha .NET da DIO.
+Um sistema de gerenciamento de hospedagens desenvolvido em **C# .NET**, como parte de um desafio da [DIO](https://dio.me/users/eduardonascto). O projeto simula o processo de reservas em um hotel, relacionando hóspedes, suítes e reservas.
 
-## Contexto
-Você foi contratado para construir um sistema de hospedagem, que será usado para realizar uma reserva em um hotel. Você precisará usar a classe Pessoa, que representa o hóspede, a classe Suíte, e a classe Reserva, que fará um relacionamento entre ambos.
+---
 
-O seu programa deverá cálcular corretamente os valores dos métodos da classe Reserva, que precisará trazer a quantidade de hóspedes e o valor da diária, concedendo um desconto de 10% para caso a reserva seja para um período maior que 10 dias.
+## 📖 Descrição
 
-## Regras e validações
-1. Não deve ser possível realizar uma reserva de uma suíte com capacidade menor do que a quantidade de hóspedes. Exemplo: Se é uma suíte capaz de hospedar 2 pessoas, então ao passar 3 hóspedes deverá retornar uma exception.
-2. O método ObterQuantidadeHospedes da classe Reserva deverá retornar a quantidade total de hóspedes, enquanto que o método CalcularValorDiaria deverá retornar o valor da diária (Dias reservados x valor da diária).
-3. Caso seja feita uma reserva igual ou maior que 10 dias, deverá ser concedido um desconto de 10% no valor da diária.
+O **Hospedafy** foi projetado para administrar reservas em um hotel. Ele permite:
 
+* Cadastrar **hóspedes**.
+* Cadastrar **suítes** disponíveis.
+* Realizar **reservas** associando hóspedes a uma suíte.
+* Validar se a suíte comporta a quantidade de hóspedes.
+* Calcular corretamente o **valor da diária**, incluindo desconto de 10% para estadias de 10 dias ou mais.
 
-![Diagrama de classe estacionamento](diagrama_classe_hotel.png)
+Este projeto **não foi construído do zero**. Diferente de outros trabalhos, aqui eu apliquei as instruções do professor e completei o código já existente, implementando os trechos sinalizados com **TODO**. Essa prática foi essencial para aprimorar minha habilidade de **compreender e contribuir em projetos em andamento**, algo comum em equipes de desenvolvimento reais.
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+---
+
+## ⚙️ Funcionalidades
+
+* **Cadastrar hóspede**: registra o nome do cliente.
+* **Cadastrar suíte**: define nome, capacidade e valor da diária.
+* **Realizar reserva**: relaciona hóspedes e suíte, verificando regras de capacidade.
+* **Obter quantidade de hóspedes**: retorna o número de pessoas incluídas na reserva.
+* **Calcular valor da diária**:
+
+  * Multiplica o valor da diária pelo número de dias.
+  * Aplica **10% de desconto** em estadias com duração igual ou superior a 10 dias.
+
+---
+
+## 🛠️ Estrutura do Projeto
+
+* **Pessoa.cs** → representa o hóspede.
+* **Suite.cs** → representa a suíte do hotel.
+* **Reserva.cs** → administra a lógica da reserva (hóspedes, quantidade, valores).
+* **Program.cs** → fluxo principal para executar e testar as funcionalidades.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+* Linguagem: **C#**
+* Plataforma: **.NET 6+**
+* Paradigma: **Programação Orientada a Objetos (POO)**
+
+---
+
+## 📂 Como Executar
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/Havenox/dio-desafio-hospedafy.git
+```
+
+2. Acesse a pasta do projeto:
+
+```bash
+cd dio-desafio-hospedafy
+```
+
+3. Compile e execute:
+
+```bash
+dotnet run
+```
+---
+
+## 🎯 Objetivos Atingidos
+
+* Compreender e aplicar **POO em C#**.
+* Exercitar **relacionamento entre classes** (Pessoa, Suíte, Reserva).
+* Aprender a **lidar com código parcialmente pronto**.
+* Praticar a leitura, entendimento e implementação de **trechos de código marcados como TODO**.
+* Desenvolver a habilidade de **contribuir em projetos em andamento**, como ocorre no mercado de trabalho.
+
+---
+
+## 📌 Autor
+
+👤 **[Eduardo Nascimento](https://www.instagram.com/eduardohavenox/)**
+🔗 [GitHub](https://github.com/Havenox)
+💼 [LinkedIn](https://www.linkedin.com/in/havenox)
+🎓 [DIO](https://dio.me/users/eduardonascto)
+
+---
+
+## 🙏 Agradecimentos
+
+Agradeço à DIO pela proposta do desafio e ao professor Leonardo Buta, pelas aulas que guiaram a prática e reforçaram a importância de saber **trabalhar em código já existente**.
+
+---
+
+## 🏆 Considerações
+
+Este projeto marca uma evolução importante: além de aplicar os conceitos de C#, foi uma oportunidade de aprender a **dar continuidade a um código-base**, habilidade indispensável para desenvolvedores em projetos reais. O **Hospedafy** simboliza esse aprendizado prático e direto.
